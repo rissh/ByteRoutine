@@ -12,6 +12,7 @@ import { Card } from "./components/Card";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { onBackgroundMessage } from "firebase/messaging/sw";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -78,7 +79,7 @@ function StoreApp() {
     <div className="place-items-center grid">
       <div className="max-w-screen-lg w-full">
         <Topbar />
-        <Card>hi there</Card>
+        <Card>Hi there</Card>
       </div>
     </div>
   );
