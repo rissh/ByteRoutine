@@ -9,6 +9,7 @@ import { RecoilRoot, useRecoilState, useSetRecoilState } from "recoil";
 import { userAtom } from "./store/atoms/user";
 import { Topbar } from "./components/Topbar";
 import { Card } from "./components/Card";
+import { LeaderBoard } from "./components/LeaderBoard";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -79,7 +80,7 @@ function StoreApp() {
     <div className="place-items-center grid">
       <div className="max-w-screen-lg w-full">
         <Topbar />
-        <Card>Hi there</Card>
+        <LeaderBoard />
       </div>
     </div>
   );
