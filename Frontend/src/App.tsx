@@ -9,7 +9,7 @@ import { RecoilRoot, useRecoilState, useSetRecoilState } from "recoil";
 import { userAtom } from "./store/atoms/user";
 import { Topbar } from "./components/Topbar";
 import { Card } from "./components/Card";
-import { LeaderBoard } from "./components/LeaderBoard";
+import { Leaderboard } from "./components/LeaderBoard";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -42,6 +42,16 @@ function App() {
 
 function StoreApp() {
   const [user, setUser] = useRecoilState(userAtom);
+
+  const leaderboardData = [
+    { id: 1, icon: "", name: "Rishi", points: 23 },
+    { id: 2, icon: "", name: "Nikhil", points: 43 },
+    { id: 3, icon: "", name: "Nilesh", points: 31 },
+    { id: 4, icon: "", name: "Omkar", points: 20 },
+    { id: 5, icon: "", name: "Ram", points: 22 },
+    { id: 6, icon: "", name: "Rahul", points: 34 },
+    { id: 7, icon: "", name: "Santosh", points: 44 },
+  ];
 
   //
   useEffect(() => {
@@ -80,7 +90,7 @@ function StoreApp() {
     <div className="place-items-center grid">
       <div className="max-w-screen-lg w-full">
         <Topbar />
-        <LeaderBoard />
+        <Leaderboard leaderboard={leaderboardData} />
       </div>
     </div>
   );

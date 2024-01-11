@@ -1,19 +1,19 @@
 //
 
 //
-// see https://erdos.sdslabs.co/users
-// see https://erdos.sdslabs.co/users
-export const LeaderBoard = ({}: {
-  leaderboard: { image: string; name: string; points: number }[];
+export const Leaderboard = ({
+  leaderboard,
+}: {
+  leaderboard: { id: number; icon: string; name: string; points: number }[];
 }) => {
   const data = [
-    { id: 1, icon: "", name: "Rishikesh", points: 23 },
-    { id: 2, icon: "", name: "Nikhil", points: 43 },
-    { id: 3, icon: "", name: "Omkar", points: 31 },
-    { id: 4, icon: "", name: "Nilesh", points: 13 },
-    { id: 5, icon: "", name: "Hrutu", points: 23 },
-    { id: 6, icon: "", name: "Ram", points: 34 },
-    { id: 7, icon: "", name: "Aniket", points: 24 },
+    { id: 1, icon: "", name: "Siddharth", points: 23 },
+    { id: 1, icon: "", name: "Ayush", points: 43 },
+    { id: 1, icon: "", name: "KKumar", points: 231 },
+    { id: 1, icon: "", name: "FEFE", points: 213 },
+    { id: 1, icon: "", name: "Jannat", points: 23 },
+    { id: 1, icon: "", name: "Siddharth", points: 34 },
+    { id: 1, icon: "", name: "Siddharth", points: 2344 },
   ];
   return (
     <div className="my-8">
@@ -24,8 +24,11 @@ export const LeaderBoard = ({}: {
           <div className="w-1/3">Name</div>
           <div className="w-1/3">Points</div>
         </div>
-        {data.map((item) => (
-          <div className="flex my-4 text-lg bg-white shadow-sm py-4 px-2">
+        {leaderboard.map((item) => (
+          <div
+            className="flex my-4 text-lg bg-white shadow-sm py-4 px-2"
+            key={item.id}
+          >
             <div className="w-1/3">{item.id}</div>
             <div className="w-1/3">{item.name}</div>
             <div className="w-1/3">{item.points}</div>
