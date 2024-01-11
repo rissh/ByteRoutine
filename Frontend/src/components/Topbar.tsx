@@ -1,12 +1,13 @@
 //
 
 //
+import { Link } from "react-router-dom";
 import { Card } from "./Card";
 
 export const Topbar = () => {
   return (
     <div className="max-w-screen-lg w-full bg-black align-center px-5 pb-5 pt-8">
-      {/* <img src="/logo.png" className="max-w-56" /> */}
+      /* <img src="/logo.png" className="max-w-56" /> */
       <div className="text-8xl text-white">Byte Routine</div>
       <NavBar />
     </div>

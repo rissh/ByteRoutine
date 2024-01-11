@@ -6,10 +6,13 @@ import { Signin } from "./components/Signin";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
 import { RecoilRoot, useRecoilState, useSetRecoilState } from "recoil";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// Components
 import { userAtom } from "./store/atoms/user";
 import { Topbar } from "./components/Topbar";
 import { Card } from "./components/Card";
 import { Leaderboard } from "./components/LeaderBoard";
+import { About } from "./components/About";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
