@@ -14,6 +14,10 @@ import { Card } from "./components/Card";
 import { Leaderboard } from "./components/LeaderBoard";
 import { About } from "./components/About";
 
+// Assets
+import GoogleIcon from "../assets/google.svg";
+import GithubIcon from "../assets/github.svg";
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { onBackgroundMessage } from "firebase/messaging/sw";
